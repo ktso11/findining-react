@@ -1,7 +1,7 @@
 @import '../index.scss';
-
-Button {
-  border-radius: 8px;
+//use classname instead of Button to prevent override
+.btn {
+  border-radius: 100px;
   color: $brand-white;
   cursor: pointer;
   box-shadow: 0;
@@ -14,32 +14,39 @@ Button {
 //use design semantics mixin in css (spacing [spacing--a] and color [primary/danger/warning/accent])
 //add accessbility (aria, tab)
 
+
 // Button Styles
 
 .primary {
-  background-color: $primary-color;
+  background-color: $brand-color;
   &:hover{
-    background-color: $primary-color-active;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
+    background-color: $brand-color-hover;
+    box-shadow: $basic-shadow;
+  }
+  &:active {
+    background-color: $brand-color-active;
+    box-shadow: $basic-shadow;
   }
 }
-.danger {
-  background-color: $danger-color;
+.ghost {
+  background-color: transparent;
   &:hover{
-    background-color: $danger-color-active;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: $basic-shadow;
+  }
+  &:active {
+    background-color: $brand-color-active;
+    box-shadow: $basic-shadow;
   }
 }
 
 // Button Sizes
 
 .medium {
-  font-size: 18px;
-  padding: 8px 16px;
+  font-size: 16px;
+  padding: 16px 24px;
 }
 
 .large {
-  font-size: 24px;
+  font-size: 20px;
   padding: 16px 24px;
 }

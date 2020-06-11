@@ -8,13 +8,8 @@ class App extends Component {
       <div>
         <Button onClick={() => {console.log("clicked")}}
           btnStyle = "primary"
-          btnSize = "large"
-          text = "Primary"
-        />
-        <Button onClick={() => {console.log("clicked")}}
-          btnStyle = "danger"
           btnSize = "medium"
-          text = "Danger"
+          text = "Primary"
         />
       </div>
     );

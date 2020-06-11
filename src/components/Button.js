@@ -6,7 +6,7 @@ import './Button.scss';
 //available styles
 const STYLES = [
   "primary", 
-  "danger"
+  "ghost"
 ]
 
 //available sizes
@@ -29,7 +29,7 @@ const Button = ({
 
     return (
       <button 
-        className={`Button ${checkBtnSize} ${checkBtnStyle}`}
+        className={`btn ${checkBtnSize} ${checkBtnStyle}`}
         onClick={onClick}>
         {text}
       </button>
